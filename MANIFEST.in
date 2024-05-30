@@ -1,0 +1,2 @@
+include dante/data/danteshots.csv
+include dante/data/dantestocks.csv

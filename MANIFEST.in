@@ -1,2 +1,2 @@
-include dante/data/danteshots.csv
-include dante/data/dantestocks.csv
+include dante/data/*
+recursive-include dante/data *

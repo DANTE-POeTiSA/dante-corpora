@@ -10,11 +10,10 @@
 
 </div>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/DANTE-POeTiSA/dante-corpora">
-    <img src="images\dante.png" alt="Logo"  height="100" style="border-radius:50%">
+    <img src="https://github.com/DANTE-POeTiSA/dante-corpora/blob/main/images/dante.png?raw=true" alt="Logo"  height="100" style="border-radius:50%">
   </a>
 
 <h3 align="center">DANTE Corpora</h3>
@@ -24,7 +23,7 @@
     <br />
     <br />
     <a href="https://github.com/DANTE-POeTiSA/dante-corpora/issues">Report Bug</a>
-    ·
+    -
     <a href="https://github.com/DANTE-POeTiSA/dante-corpora/issues">Request Feature</a>
   </p>
 </div>
@@ -37,7 +36,7 @@
 
 ## Git Clone
 
-Para obter uma cópia local deste repositório, utilize o seguinte comando:
+Para obter uma copia local deste repositorio, utilize o seguinte comando:
 
 ```
 git clone https://github.com/DANTE-POeTiSA/dante-corpora.git
@@ -45,7 +44,7 @@ git clone https://github.com/DANTE-POeTiSA/dante-corpora.git
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Instalação
+## Instalacao
 
 
 
@@ -70,15 +69,15 @@ pip install dante-corpora
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Contribuição
+## Contribuicao
 
-Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, relatar problemas ou abrir pull requests.
+Contribuicoes sao bem-vindas! Sinta-se a vontade para propor melhorias, relatar problemas ou abrir pull requests.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Licença
+## Licenca
 
-Este projeto é licenciado sob a [Licença MIT](LICENSE).
+Este projeto e licenciado sob a [Licenca MIT](LICENSE).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

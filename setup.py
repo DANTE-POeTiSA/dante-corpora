@@ -5,15 +5,16 @@ with open("README.md", "r") as fh:
 
 setup(
     name='dante-corpora',
-    version='1.0.6',
+    version='1.0.9',
     description='Pacote Python contendo os corpora do projeto DANTE do POeTiSA',
     long_description=long_description,
     long_description_content_type="text/markdown",
     author='felmateos',
     author_email='felmateos@gmail.com',
     packages=find_packages(),
+    include_package_data=True,
     package_data={
-        'dante': ['data/danteshots.csv', 'data/dantestocks.csv']
+        'dante': ['data/**/*']
     },
     install_requires=[
         'pandas==2.2.2'

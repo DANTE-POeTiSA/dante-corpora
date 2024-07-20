@@ -1,11 +1,10 @@
 import pandas as pd
 import pkg_resources
-import difflib
 
 class Dante():
 
     def __init__(self, corpus):
-        self.corpora = ['DanteStocks', 'DanteShots']
+        self.corpora = ['dantestocks', 'danteshots']
         self.corpus = corpus
 
 
@@ -17,11 +16,10 @@ class Dante():
     @corpus.setter
     def corpus(self, corpus):
         try:
-            best_fit = difflib.get_close_matches(corpus, self.corpora)[0]
-            print(f'Returning {best_fit} corpus.')
-            self._corpus = best_fit
-        except IndexError:
-            print(f'Wasn\'t able to find "{self.corpus}" named corpus. Check documentation on: https://pypi.org/project/dante-corpora/')
+            print(f'Returning {corpus} corpus.')
+            self._corpus = corpus
+        except FileNotFoundError:
+            print(f'Wasn\'t able to find "{corpus}" named corpus. Check documentation on: https://pypi.org/project/dante-corpora/')
             self._corpus = None
 
 

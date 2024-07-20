@@ -17,8 +17,7 @@ setup(
         'dante': ['data/**/*']
     },
     install_requires=[
-        'pandas==2.2.2',
-        'cdifflib==1.2.6'
+        'pandas==2.2.2'
     ],
     license='MIT'
 )

@@ -1,72 +1,34 @@
 import pandas as pd
 import pkg_resources
+import difflib
 
 class Dante():
 
-    def __init__(self, option):
-        self.pos = option
-        self.base = option
-        self.freq = option
-        self.freq_tweet = option
-
-
-    def __str__(self):
-        return self.pos
+    def __init__(self, corpus):
+        self.corpora = ['DanteStocks', 'DanteShots']
+        self.corpus = corpus
 
 
     @property
-    def pos(self):
-        return self._pos
-
-
-    @pos.setter
-    def pos(self, option):
+    def corpus(self):
+        return self._corpus
+    
+    
+    @corpus.setter
+    def corpus(self, corpus):
         try:
-            path = pkg_resources.resource_filename(__name__, f'data/{option}/annotated.conllu')
-            with open(path, 'r', encoding='utf-8') as f:
-                data = f.read()
-            self._pos = data
-        except FileNotFoundError:
-            print('Arquivo nao encontrado! Verifique se o valor passado esta em [...]')
+            best_fit = difflib.get_close_matches(corpus, self.corpora)[0]
+            print(f'Returning {best_fit} corpus.')
+            self._corpus = best_fit
+        except IndexError:
+            print(f'Wasn\'t able to find "{self.corpus}" named corpus. Check documentation on: https://pypi.org/project/dante-corpora/')
+            self._corpus = None
 
 
-    @property
-    def base(self):
-        return self._base
-
-
-    @base.setter
-    def base(self, option):
+    def get_data(self, filename):
         try:
-            path = pkg_resources.resource_filename(__name__, f'data/{option}/base.csv')
-            self._base = pd.read_csv(path, encoding='utf-8')
+            path = pkg_resources.resource_filename(__name__, f'data/{self.corpus}/{filename}.csv')
+            return pd.read_csv(path, encoding='utf-8', low_memory=False)
         except FileNotFoundError:
-            print('Arquivo nao encontrado! Verifique se o valor passado esta em [...]')
-
-
-    @property
-    def freq(self):
-        return self._freq
-
-
-    @freq.setter
-    def freq(self, option):
-        try:
-            path = pkg_resources.resource_filename(__name__, f'data/{option}/base.csv')
-            self._freq = pd.read_csv(path, encoding='utf-8')
-        except FileNotFoundError:
-            print('Arquivo nao encontrado! Verifique se o valor passado esta em [...]')
-
-
-    @property
-    def freq_tweet(self):
-        return self._freq_tweet
-
-
-    @freq_tweet.setter
-    def freq_tweet(self, option):
-        try:
-            path = pkg_resources.resource_filename(__name__, f'data/{option}/base.csv')
-            self._freq_tweet = pd.read_csv(path, encoding='utf-8')
-        except FileNotFoundError:
-            print('Arquivo nao encontrado! Verifique se o valor passado esta em [...]')        
+            print(f'Wasn\'t able to find "{filename}" named file inside "{self.corpus}". Check documentation on: https://pypi.org/project/dante-corpora/')
+            return False

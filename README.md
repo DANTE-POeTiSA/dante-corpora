@@ -30,10 +30,6 @@
 
 <br />
 
----
-
-...
-
 ## Git Clone
 
 Para obter uma copia local deste repositorio, utilize o seguinte comando:

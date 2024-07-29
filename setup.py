@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='dante-corpora',
-    version='2.0.3',
+    version='2.0.4',
     description='Pacote Python contendo os corpora do projeto DANTE do POeTiSA',
     long_description=long_description,
     long_description_content_type="text/markdown",

@@ -47,10 +47,10 @@ Esta biblioteca contempla os seguintes corpora:
     - emotion: Camada de anotação dos tweets;
     - pos: Camada de anotação Morfossintática (Part of Speech).
 
-2. DANTEShots: Corpus de tweets de pessoas políticas sobre a vacinação contra a COVID-19. Esse corpus foi segmentado em 3 Pandas DataFrame:
+2. DANTEShots: Corpus de tweets de pessoas politicas sobre a vacinacao contra a COVID-19. Esse corpus foi segmentado em 3 Pandas DataFrame:
     - base: Conteudo dos tweets;
     - stance: Camada de anotação de posicionamento;
-    - pos: Camada de anotação Morfossintática (Part of Speech).
+    - pos: Camada de anotacao Morfossintatica (Part of Speech).
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

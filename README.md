@@ -30,19 +30,7 @@
 
 <br />
 
-## Git Clone
-
-Para obter uma copia local deste repositorio, utilize o seguinte comando:
-
-```
-git clone https://github.com/DANTE-POeTiSA/dante-corpora.git
-```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Instalacao
-
-
 
 ```
 pip install dante-corpora
@@ -52,16 +40,40 @@ pip install dante-corpora
 
 ## Conjunto de Dados
 
-...
+Esta biblioteca contempla os seguintes corpora:
+
+1. DANTEStocks: Corpus de tweets que usam termos do mercado financeiro. Esse corpus foi segmentado em 3 Pandas DataFrame:
+    - base: Conteudo dos tweets;
+    - emotion: Camada de anotação dos tweets;
+    - pos: Camada de anotação Morfossintática (Part of Speech).
+
+2. DANTEShots: Corpus de tweets de pessoas políticas sobre a vacinação contra a COVID-19. Esse corpus foi segmentado em 3 Pandas DataFrame:
+    - base: Conteudo dos tweets;
+    - stance: Camada de anotação de posicionamento;
+    - pos: Camada de anotação Morfossintática (Part of Speech).
 
 
- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## Documentos importantes
+## Exemplos de uso
 
-...
+```python
+# Importacao da biblioteca
+from dante.corpora import Dante
+
+# Instanciando qual corpus sera usado
+stocks = Dante('dantestocks')
+
+# Instanciando conjuntos de dados 
+base = stocks.get_data('base')
+emotion = stocks.get_data('emotion')
+pos = stocks.get_data('pos')
+
+# Exibindo as 5 primeiras linhas do conjunto base
+print(base.head())
+```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
